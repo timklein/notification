@@ -7,11 +7,11 @@ const config = require('../config/configVars.json');
 
 const contactController = {
 
-	createContact	: function (req, res) {
+	createContact	: function (req, res, next) {
 	
 		if (req.body.contactId) {
 
-			res.sendStatus(200);
+			next();
 
 		}
 		else {
@@ -57,10 +57,9 @@ const contactController = {
 					let newId = body.split('<value><i4>')[1].split('</i4></value>')[0];
 					req.body.newContactId = newId;
 					console.log('Contact Record ' + newId + ' Created/Updated in Application ' + config.acct);
+					next();
 				}
 			});
-
-			res.sendStatus(200);
 		}
 	}
 };
