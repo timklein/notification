@@ -1,0 +1,21 @@
+{
+  "name": "callrail2",
+  "version": "0.1.0",
+  "description": "Generate Infusionsoft Contact from CallRail call",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Tim Klein",
+  "license": "MIT",
+  "jshintConfig": {
+    "esversion": 6,
+    "node": true
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "request": "^2.81.0"
+  }
+}
